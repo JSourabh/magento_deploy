@@ -7,7 +7,7 @@ pipeline {
                 sh 'mkdir /var/www/html/magent_pip'
 		echo 'copy data'
 		sh 'mv * /var/www/html/magent_pip'
-		sh 'mv .* /var/www/html/magent_pip'
+		
             }
         }
         stage('Test') {
