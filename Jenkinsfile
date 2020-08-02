@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+		echo 'create directory'
+                sh 'mkdir /var/www/html/magent_pip'
+		echo 'copy data'
+		sh 'mv *.* /var/www/html/magent_pip'
             }
         }
         stage('Test') {
