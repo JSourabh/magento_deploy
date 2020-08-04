@@ -3,12 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-		echo 'create directory'
+		echo 'create directory on jenkins'
                 sh 'mkdir /var/www/html/magento_2'
-		echo 'copy data'
+		echo 'copy data one path to another'
 		sh 'mv * /var/www/html/magento_2'
-		echo 'move hidden data'
-		sh 'mv .* /var/www/html/magento_2'		
             }
         }
         stage('Test') {
